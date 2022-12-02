@@ -3,7 +3,7 @@ holdingScreen.addEventListener('click',()=>{
   holdingScreen.style.opacity = 0;
   setTimeout(()=>{
     holdingScreen.classList.add('hidden')
-  },610)
+  },1000)
 })
 
 function displayQuiz(){
@@ -91,11 +91,8 @@ const quizQuestions = [
 },
 ];
 
-// currentQuizTings
-// currentQuizData = quizData
 
-
-let currentQuizTings = 0
+let quizTings = 0
 let quizScore = 0
 const myQuiz = document.getElementById('quiz')
 const quizAnswers = document.querySelectorAll('.answer')
@@ -109,7 +106,7 @@ loadQuiz()
 
 function loadQuiz() {
   uncheckedAnswers()
-  const quizData = quizQuestions[currentQuizTings]
+  const quizData = quizQuestions[quizTings]
   quizQuestion.innerText = quizData.question
   question_a.innerText = quizData.a
   question_b.innerText = quizData.b
@@ -135,11 +132,11 @@ submitButton.addEventListener('click', () => {
   const answer = checkedAnswer()
 
   if(answer) {
-     if(answer === quizQuestions[currentQuizTings].correct) {
+     if(answer === quizQuestions[quizTings].correct) {
          quizScore++
      }
-     currentQuizTings++
-     if(currentQuizTings < quizQuestions.length) {
+     quizTings++
+     if(quizTings < quizQuestions.length) {
          loadQuiz()
      } else {
         checkScore()
