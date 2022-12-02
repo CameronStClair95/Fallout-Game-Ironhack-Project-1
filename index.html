@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Knowledge Quiz Game</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Introduction screen -->
+    <div onclick="disappearContainer()" class="container">
+        <div class="holding-screen">
+            <span> <img img class="center" src="https://wallpapercrafter.com/desktop/102944-Fallout-Fallout-4-Vault-Boy-vector-vector-art-video-games-green-black-background-black.png" alt="vault-boy"></
+              <br>
+            <h1 class= "holding-screen-header">Welcome to the vault to start the game click anywhere on the screen</h1>
+
+          </div>
+
+    <div>
+          <img class="gme-ScreenImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIDm9Rjq36hrxKxhpmOZmtjtTezEzpStIvoFcaKgtgHakN3CxNFilkOTkDnG7q_LGsLm4&usqp=CAU" alt="access-sucessful">
+          
+        <!-- Rules screen & Game Screen -->
+        <h3 class="rules-Text">Hello Player and welcome to the vault...</h3>
+        <br>
+        <p class="context-Text"> You're probably wondering what's going on so let me give you a quick update. 
+          <br>
+          <br>The surface is longer safe for human life, so in order to save humanity we retreated underground into these vaults. They were constructed by world leaders in the event that the surface of the planet would become uninhabitable.
+          <br>
+          <br>
+          We are trying to survive and rebuild down here and are looking for teachers with knowledge of the world we used to live on the surface.
+          <br>
+          <br>
+          You've been selected to take this test. If you score above 7 on this test you will be selected to teach alongside others who score highly. 
+         </p>
+
+        <p class="rules-Text">Here are the rules:</p>
+        <ul class="rules-Text">
+            <li>You will be given 10 questions</li>
+            <li>You will have 15 seconds to answer each question</li>
+            <li>At the end of the quiz, your score will be displayed</li>
+        </ul>
+        <p class="rules-Text"> Best of luck to you</p>
+        <br>
+        <p class="rules-Text"> Click the Start Button to Begin
+          <br> the quiz should appear below</p>
+<span class="start-btn1">
+      <button onclick="displayQuiz()" class="start-btn"> Start</button>
+        <br>
+        <br>
+</span>
+<br>
+<br>
+        <!-- Quiz Screen -->
+        <div class="quiz-container" id="quiz">
+            <div class="quiz-header">
+              <h2 id="question">Question Text</h2>
+            </div>
+              <ul>
+                <li>
+                  <input type="radio" name="answer" id="a" class="answer">
+                  <label for="a" id="question_a">Answer</label>
+                </li>
+                <li>
+                  <input type="radio" name="answer" id="b" class="answer">
+                  <label for="b" id="question_b">Answer</label>
+                </li>
+                <li>
+                  <input type="radio" name="answer" id="c" class="answer">
+                  <label for="c" id="question_c">Answer</label>
+                </li>
+                <li>
+                  <input type="radio" name="answer" id="d" class="answer">
+                  <label for="d" id="question_d">Answer</label>
+                  <br>
+                  <span class="submit-btn1">
+                    <button class="submit-btn" id="submit">Submit</button>
+                    </span>
+                    <br>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+            </div>
+          </div>
+</body>
+<script src="./index.js"></script>
+</html>
